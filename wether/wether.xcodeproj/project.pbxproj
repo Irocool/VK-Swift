@@ -13,6 +13,7 @@
 		ADA17E3A24D5A45C000C3043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA17E3924D5A45C000C3043 /* Assets.xcassets */; };
 		ADA17E3D24D5A45C000C3043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA17E3B24D5A45C000C3043 /* LaunchScreen.storyboard */; };
 		ADA17E4524D85218000C3043 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA17E4424D85218000C3043 /* LoginFormController.swift */; };
+		ADD5A56224F0303400BC2C6F /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5A56124F0303400BC2C6F /* ViewController1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ADA17E3C24D5A45C000C3043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADA17E3E24D5A45C000C3043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADA17E4424D85218000C3043 /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		ADD5A56124F0303400BC2C6F /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				ADA17E3024D5A437000C3043 /* AppDelegate.swift */,
 				ADA17E3224D5A437000C3043 /* SceneDelegate.swift */,
+				ADA17E3B24D5A45C000C3043 /* LaunchScreen.storyboard */,
+				ADD5A56124F0303400BC2C6F /* ViewController1.swift */,
+				ADA17E4424D85218000C3043 /* LoginFormController.swift */,
 				ADA17E3624D5A437000C3043 /* Main.storyboard */,
 				ADA17E3924D5A45C000C3043 /* Assets.xcassets */,
-				ADA17E3B24D5A45C000C3043 /* LaunchScreen.storyboard */,
 				ADA17E3E24D5A45C000C3043 /* Info.plist */,
-				ADA17E4424D85218000C3043 /* LoginFormController.swift */,
 			);
 			path = wether;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD5A56224F0303400BC2C6F /* ViewController1.swift in Sources */,
 				ADA17E4524D85218000C3043 /* LoginFormController.swift in Sources */,
 				ADA17E3124D5A437000C3043 /* AppDelegate.swift in Sources */,
 				ADA17E3324D5A437000C3043 /* SceneDelegate.swift in Sources */,
