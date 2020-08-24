@@ -153,7 +153,7 @@
         <scene sceneID="umb-Kv-4Zk">
             <objects>
                 <tableViewController id="UQO-HD-V2c" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ve3-AJ-wUK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ve3-AJ-wUK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -223,7 +223,7 @@
             <objects>
                 <collectionViewController id="TbF-Mk-CIp" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="QSf-du-l5Q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IBl-XU-P55">
@@ -255,17 +255,22 @@
         <!--Friend-->
         <scene sceneID="6Rq-GW-OQd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WMI-hg-hkx" sceneMemberID="viewController">
+                <navigationController title="Friend" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="WMI-hg-hkx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Friend" id="4tX-XJ-Hx0">
                         <imageReference key="image" image="person" catalog="system" symbolScale="medium"/>
-                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="badgeColor" systemColor="separatorColor"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gBB-Sk-PDT">
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="gBB-Sk-PDT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="labelColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Ub-r4-Ohe">
+                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="FwC-Ba-1Jk" kind="presentation" id="hFr-bO-IPn"/>
                     </connections>
@@ -295,22 +300,51 @@
             </objects>
             <point key="canvasLocation" x="119" y="148"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Friends Table View Controller-->
         <scene sceneID="YjY-UR-gtW">
             <objects>
-                <tableViewController modalPresentationStyle="fullScreen" id="FwC-Ba-1Jk" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="grG-Fw-u9w">
+                <tableViewController modalPresentationStyle="fullScreen" id="FwC-Ba-1Jk" customClass="FriendsTableViewController" customModule="wether" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="grG-Fw-u9w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemGray3Color"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gjl-s0-P20">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="138" id="gjl-s0-P20" customClass="FriendsTableViewCell" customModule="wether" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gjl-s0-P20" id="RUK-NH-v15">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spm-wI-fLg">
+                                            <rect key="frame" x="165" y="36" width="239" height="45"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NKZ-Xm-ovd">
+                                            <rect key="frame" x="27" y="3" width="130" height="132.5"/>
+                                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="cvK-qD-Nim"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Spm-wI-fLg" firstAttribute="top" secondItem="RUK-NH-v15" secondAttribute="topMargin" constant="25" id="68B-hP-FYM"/>
+                                        <constraint firstItem="NKZ-Xm-ovd" firstAttribute="centerY" secondItem="RUK-NH-v15" secondAttribute="centerY" id="ABI-Yc-HfU"/>
+                                        <constraint firstItem="NKZ-Xm-ovd" firstAttribute="top" secondItem="RUK-NH-v15" secondAttribute="topMargin" constant="-10.5" id="HME-rM-XnF"/>
+                                        <constraint firstItem="NKZ-Xm-ovd" firstAttribute="leading" secondItem="RUK-NH-v15" secondAttribute="leadingMargin" constant="7" id="RUU-X0-XAe"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Spm-wI-fLg" secondAttribute="trailing" constant="-10" id="dAV-sD-Ich"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Spm-wI-fLg" secondAttribute="bottom" constant="46" id="skT-6o-4bn"/>
+                                        <constraint firstItem="Spm-wI-fLg" firstAttribute="leading" secondItem="NKZ-Xm-ovd" secondAttribute="trailing" constant="8" symbolic="YES" id="xeA-ja-ekz"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="AvatarFriend" destination="NKZ-Xm-ovd" id="4zm-0F-mg4"/>
+                                    <outlet property="NameFriend" destination="Spm-wI-fLg" id="3rc-md-0Rm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -319,20 +353,30 @@
                         </connections>
                     </tableView>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="TbF-Mk-CIp" kind="presentation" id="4pd-Hj-ro6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CVz-7j-tGL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1007" y="-548"/>
+            <point key="canvasLocation" x="1005.7971014492755" y="-548.4375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
