@@ -22,9 +22,13 @@ class FriendsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     private func appendFriends() {
-        let friend1 = Friend(name: "Sergey", imageName: "AVATARSERGEY")
-        let friend2 = Friend(name: "Kate", imageName: "AVATARKate")
-        let friend3 = Friend(name: "Mary", imageName: "AVATARMary")
+        let friend1 = Friend(name: "Valery", imageName: "1", photosByFriend: [UIImage(named: "sea1.png"),
+             UIImage(named: "sea2.png"),
+             UIImage(named: "sea3.png"),
+             UIImage(named: "sea4.png")])
+        let friend2 = Friend(name: "Kate", imageName: "5", photosByFriend: [UIImage(named: "sea5.png")])
+        let friend3 = Friend(name: "Mike", imageName: "7",  photosByFriend: [UIImage(named: "sea6.png")])
+                                                                             
         arrayOfFriends.append(friend1)
         arrayOfFriends.append(friend2)
         arrayOfFriends.append(friend3)
@@ -36,7 +40,7 @@ class FriendsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,15 +52,25 @@ class FriendsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! FriendsTableViewCell
         let friend = arrayOfFriends[indexPath.row]
-        cell.NameFriend.text = friend.name
-        cell.AvatarFriend.image = UIImage.init(named: friend.imageName)
+        cell.configure(for: friend)
+        //cell.NameFriend.text = friend.name
+        //cell.AvatarFriend.image = UIImage.init(named: friend.imageName)
 
         // Configure the cell...
 
         return cell
     }
-    
-
+    //MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let photoFriendsController = segue.destination as? FriendPhotosCollectionViewController {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let friend =  arrayOfFriends[indexPath.row]
+                photoFriendsController.friend = friend
+            }
+            }
+        }  //
+        
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -102,4 +116,4 @@ class FriendsTableViewController: UITableViewController {
     }
     */
 
-}
+
