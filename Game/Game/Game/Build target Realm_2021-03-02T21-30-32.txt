@@ -1,0 +1,12 @@
+
+Showing Recent Messages
+The iOS Simulator deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.4.99.
+
+WriteAuxiliaryFile /Users/polzovatel/Library/Developer/Xcode/DerivedData/Weather-awzjfsxrhdkzjnggakdhfxprqogu/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Realm.build/Realm-all-target-headers.hmap (in target 'Realm' from project 'Pods')
+    cd /Users/polzovatel/Downloads/Weather-start/Pods
+    write-file /Users/polzovatel/Library/Developer/Xcode/DerivedData/Weather-awzjfsxrhdkzjnggakdhfxprqogu/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Realm.build/Realm-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/polzovatel/Library/Developer/Xcode/DerivedData/Weather-awzjfsxrhdkzjnggakdhfxprqogu/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Realm.build/Realm-all-non-framework-target-headers.hmap (in target 'Realm' from project 'Pods')
+    cd /Users/polzovatel/Downloads/Weather-start/Pods
+    write-file /Users/polzovatel/Library/Developer/Xcode/DerivedData/Weather-awzjfsxrhdkzjnggakdhfxprqogu/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Realm.build/Realm-all-non-framework-target-headers.hmap
+
